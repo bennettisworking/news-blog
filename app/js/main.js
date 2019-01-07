@@ -22,6 +22,8 @@ let app = angular
 		});
 });
 
+// This is pretty much the only controller used bc the app is simple
+
 function pageController($http, $scope, dataService, $routeParams){
 	$scope.postId = $routeParams.id;
 	$scope.bgBackup = 'https://media.npr.org/assets/img/2016/11/06/gettyimages-73999058_wide-7742067322b55167ce587870f714dba3699fdd2e.jpg?s=800';
@@ -40,8 +42,10 @@ function pageController($http, $scope, dataService, $routeParams){
 }
 
 function sidebarController($http, $scope){
-
+	// Eventually there will be a more robust sidebar
 }
+
+// Filter to change timestamp string into formatted 'ago' string
 
 function timeSince(){
 	return function(time){
@@ -59,19 +63,21 @@ function timeSince(){
 		 }
 		if(secondsPast > 86400){
 		    day = timeStamp.getDate();
-		    month = timeStamp.toDateString().match(/ [a-zA-Z]*/)[0].replace(" ","");
-		    year = timeStamp.getFullYear() == now.getFullYear() ? "" :  " "+timeStamp.getFullYear();
-		    return day + " " + month + year;
+		    month = timeStamp.toDateString().match(/ [a-zA-Z]*/)[0].replace(' ','');
+		    year = timeStamp.getFullYear() == now.getFullYear() ? '' : ' '+timeStamp.getFullYear();
+		    return day + ' ' + month + year;
 		}
 	}
 };
+
+// Factory to handle API
 
 function dataService($http){
 	//API KEY: d6787aa40f3340469a934e270196e0c7
 	return{
 		getNews: function(subject){
 			let API_KEY = 'd6787aa40f3340469a934e270196e0c7';
-			let str = 'https://newsapi.org/v2/everything?q=' + subject + '&sortBy=publishedAt&apiKey=' + API_KEY;
+			let str = 'https://newsapi.org/v2/everything?q=' + subject + '&pageSize=19&sortBy=publishedAt&apiKey=' + API_KEY;
     		let call = $http.get(str).then(function(response){
 		      //console.log(data);
 		      return response.data;
