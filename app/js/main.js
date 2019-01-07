@@ -10,11 +10,11 @@ let app = angular
 .config(function($routeProvider, $locationProvider) {
 	$routeProvider
 		.when('/', {
-			templateUrl: '../partials/list.html',
+			templateUrl: 'partials/list.html',
 			controller: 'pageController'
 		})
 		.when('/post/:id', {
-			templateUrl: '../partials/post.html',
+			templateUrl: 'partials/post.html',
 			controller: 'pageController'
 		})
 		.otherwise({
