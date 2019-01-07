@@ -29,10 +29,10 @@ function pageController($http, $scope, dataService, $routeParams){
 	$scope.bgBackup = 'https://media.npr.org/assets/img/2016/11/06/gettyimages-73999058_wide-7742067322b55167ce587870f714dba3699fdd2e.jpg?s=800';
 	$scope.hoverEffect = function(e){
 		e.target.style.opacity = .3;
-	}
+	};
 	$scope.removeHover = function(e){
 		e.target.style.opacity = 0;
-	}
+	};
 	//$scope.defaultImage = 'https://i.imgur.com/LWWlGdz.jpg';
 	dataService.getNews('pink+floyd').then(function(data){
 		$scope.news=data;
@@ -45,7 +45,7 @@ function sidebarController($http, $scope){
 	// Eventually there will be a more robust sidebar
 }
 
-// Filter to change timestamp string into formatted 'ago' string
+// Filter to change timestamp string into formatted 'ago' string 
 
 function timeSince(){
 	return function(time){
@@ -67,8 +67,8 @@ function timeSince(){
 		    year = timeStamp.getFullYear() == now.getFullYear() ? '' : ' '+timeStamp.getFullYear();
 		    return day + ' ' + month + year;
 		}
-	}
-};
+	};
+}
 
 // Factory to handle API
 
