@@ -12,7 +12,6 @@
     "connect": "^3.6.6",
     "gulp": "^3.9.1",
     "gulp-cli": "^2.0.1",
-    "gulp-mocha": "^6.0.0",
     "gulp-util": "^3.0.8"
   },
   "devDependencies": {
