@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Pink Floyd News | Sponsored by BetterUp</title>
+<meta name="description" content="The best fake BetterUp blog ever!">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular-route.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular-animate.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script> 
+</head>
+<body ng-app="betterBlog">
+	<div class="page">
+	<video autoplay muted loop id="videobg" class="page_bgvideo">
+	  <source src="assets/projection.mp4" type="video/mp4">
+	</video>
+	<header class="header_masthead">
+		<nav class="navbar navbar-expand-md navbar-dark nav">
+  			<a class="navbar-brand" href="#">PFN</a>
+ 			 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <!--toggle for nav hamburger -->
+    			<span class="navbar-toggler-icon"></span>
+  			</button>
+	  		<div class="collapse navbar-collapse" id="navbar">
+	    		<ul class="navbar-nav mr-auto">
+	      			<li class="nav_nav-item nav-item active">
+	       				<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+	      			</li>
+	      			<li class="nav_nav-item nav-item">
+	        			<a class="nav-link" href="http://discogs.com">Discogs.com</a>
+	      			</li>
+	   			</ul>
+	  		</div>
+		</nav>
+  		<h1 class="header_maintitle">Pink Floyd News</h1>
+	</header>
+	<main class="main container">
+		<div class="row">
+			<div class="container page_container col-12 col-md-8 col-lg-9">
+		  		<ng-view class="ngview"></ng-view> <!--partials will be inserted here -->
+		  	</div>
+		  	<div class="sidebar col-12 col-md-4 col-lg-3">
+		  		<div ng-include="'partials/sidebar.html'">
+				</div>
+	  		</div>
+		</div>
+	</main>
+  	<footer class="footer"> 
+  		<small>&copy; 2019 Pink Floyd News, LLC  |  Thank you <a href="http://newsapi.org" target="_blank">NewsAPI  |  <a href="http://betterup.co" target="_blank">BetterUp</a></small>
+  	</footer>
+  </div>
+</body>
+</html>

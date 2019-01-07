@@ -1,0 +1,36 @@
+<div class="list row">
+	<article class="page_articlepreview col-12 pt-3 mb-sm-4">
+		<a href="/#!/post/0">
+			<div class="list_overlay" ng-mouseover="hoverEffect($event)" ng-mouseout="removeHover($event)"></div>
+		</a>
+		<figure>
+		<div class="list_imagecontainer list_imagecontainer-first" col-12">
+			<div class="list_image" ng-style="{'background-image':'url(' + (news.articles[0].urlToImage || bgBackup) + ')'}"></div>
+		</div>
+		</figure>
+		<section>
+			<div class="list_text-big">
+				<h5>{{news.articles[0].title | limitTo: 120}}{{news.articles[0].title.length > 120 ? '...' : ''}}</h5>
+				<p>{{news.articles[0].description}}</p>
+				<div class="list_posttime">by {{news.articles[0].author || 'Staff Reporter'}} | Posted {{news.articles[0].publishedAt | timeSince}} ago</div>
+			</div>
+		</section>
+	</article>
+	<article class="page_articlepreview col-12 col-sm-12 col-md-6 col-lg-4 pt-3 mb-sm-4" ng-repeat="article in news.articles" ng-if="$index !== 0">
+		<a href="/#!/post/{{$index}}">
+			<div class="list_overlay" ng-mouseover="hoverEffect($event)" ng-mouseout="removeHover($event)"></div>
+		</a>
+		<figure>
+			<div class="list_imagecontainer" col-12">
+				<div class="list_image" ng-style="{'background-image':'url({{article.urlToImage || bgBackup}})'}"></div>
+			</div>
+		</figure>
+		<section>
+			<div class="list_text">
+				<h5>{{article.title | limitTo: 120}}{{article.title.length > 120 ? '...' : ''}}</h5>
+				<p>{{article.description}}</p>
+				<div class="list_posttime">by {{article.author || 'Staff Reporter'}} | Posted {{article.publishedAt | timeSince}} ago</div>
+			</div>
+		</section>
+	</article>
+</div>
