@@ -444,7 +444,8 @@ a:hover {
 .header_masthead h1 {
   font-size: 66px;
   text-align: center;
-  padding: 150px 0 50px 0; }
+  padding: 150px 0 50px 0;
+  margin: 0; }
 
 @media (max-width: 767px) {
   .header_masthead h1 {
@@ -540,6 +541,9 @@ a:hover {
   height: 100%;
   background-size: cover;
   background-position: center center; }
+
+.list_image-first {
+  background-position: center 20%; }
 
 @media (max-width: 767px) {
   .list_imagecontainer {
