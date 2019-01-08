@@ -390,6 +390,7 @@ figure {
 body {
   font-family: "Exo 2", Arial, sans-serif;
   background-color: #444;
+  /*background-image: $default-bg;*/
   color: #efefef; }
 
 a, a:active, a:hover {

@@ -4,6 +4,7 @@
 
 $nav-bg: rgba(0, 0, 0, .4);
 $nav-color: #dedede;
+$default-bg: url(../assets/projection.jpg);
 $default-font: 'Exo 2', Arial, sans-serif;
 $link-color: #efefef;
 $hover-color: #abcdab;
@@ -44,6 +45,7 @@ figure{
 body{
 	font-family: $default-font;
 	background-color: #444;
+	/*background-image: $default-bg;*/
 	color: #efefef;}
 
 a, a:active, a:hover {
